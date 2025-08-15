@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brain Era</title>
+  <link rel="stylesheet" href="pairbuster.css">
+</head>
+
+<body>
+  <a href="index.html" class="home-btn">
+    <button class="btn-neon button"><img src="home.png" alt="" class="image"> Home</button>
+  </a>
+  <div class="logo"></div>
+  <h1>Pair Busters</h1>
+  <button id="resetBtn" class="btn-neon">Start Game</button>
+  <div class="main">
+
+    <div class="main1">
+      <div id="game"></div>
+    </div>
+
+
+    <div class="main2 status-text">
+
+      <div class="game-stats">
+        <div class="stat-item">
+          <div class="stat-label"></div>
+          <div class="stat-value" id="timer" style="height:auto; width:7rem">Timer</div>
+        </div>
+      </div>
+
+      <div class="stat-item" style="margin-top: 1rem;">
+        <div class="stat-label"></div>
+        <div id="bestScore" class="stat-value " style="height: auto; width:auto">Best Time</div>
+      </div>
+      <div id="message" class="neon-text"></div>
+    </div>
+
+
+  </div>
+
+  <br><br><br>
+
+  <div class="starfield">
+    <div class="stars stars1"></div>
+    <div class="stars stars2"></div>
+    <div class="stars stars3"></div>
+  </div>
+
+  <script src="pairbuster.js"></script>
+</body>
+
+</html>

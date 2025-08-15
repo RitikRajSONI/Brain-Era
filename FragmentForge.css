@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Neon Purple Color Palette */
+    --background: 270 100% 6%;
+    /* dark purple background */
+    --foreground: 270 100% 85%;
+    /* light neon purple */
+    --card: 270 100% 8%;
+    /* dark purple card background */
+    --card-foreground: 270 100% 85%;
+    /* light neon purple on card */
+    --primary: 270 100% 60%;
+    /* bright neon purple primary */
+    --primary-foreground: 270 100% 15%;
+    /* dark purple text on primary */
+    --primary-glow: 270 100% 80%;
+    /* glowing neon purple */
+    --secondary: 270 60% 20%;
+    /* muted dark purple secondary */
+    --secondary-foreground: 270 100% 85%;
+    /* light neon purple secondary text */
+    --accent: 280 80% 65%;
+    /* complementary accent purple */
+    --accent-foreground: 270 100% 15%;
+    /* dark purple accent foreground */
+    --destructive: 340 100% 65%;
+    /* pinkish-red for destructive */
+    --border: 270 80% 30%;
+    /* purple border */
+    --input: 270 80% 20%;
+    /* input background purple */
+    --ring: 270 100% 60%;
+    /* neon purple ring */
+
+    /* Neon Gradients */
+    --gradient-neon: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-dark: linear-gradient(135deg, hsl(270 100% 4%), hsl(270 60% 10%));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--primary-glow)), hsl(var(--primary)));
+
+    /* Shadows & Glows */
+    --shadow-neon: 0 0 20px hsl(var(--primary) / 0.5);
+    --shadow-neon-strong: 0 0 40px hsl(var(--primary) / 0.8);
+    --shadow-tile: 0 0 20px hsl(var(--primary) / 0.3);
+    --shadow-tile-hover: 0 0 35px hsl(var(--primary) / 0.9);
+
+    /* Animations */
+    --transition-neon: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(ellipse at center, #09090a 0%, #040202 80%);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Orbitron', monospace, sans-serif;
+    /* keep your font */
+    padding: 2rem 1rem;
+    /* if needed for spacing */
+}
+
+.starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.starfield .stars {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    border-radius: 50%;
+}
+
+.starfield .stars1 {
+    box-shadow:
+        5vw 10vh white,
+        15vw 30vh white,
+        30vw 25vh white,
+        50vw 80vh white,
+        80vw 5vh white,
+        90vw 60vh white,
+        70vw 15vh white,
+        40vw 50vh white,
+        20vw 75vh white,
+        60vw 40vh white;
+    width: 1px;
+    height: 1px;
+    animation: starMove1 30s linear infinite;
+}
+
+.starfield .stars2 {
+    box-shadow:
+        10vw 15vh white,
+        25vw 40vh white,
+        45vw 20vh white,
+        55vw 70vh white,
+        85vw 10vh white,
+        75vw 65vh white;
+    width: 2px;
+    height: 2px;
+    animation: starMove2 25s linear infinite;
+}
+
+.starfield .stars3 {
+    box-shadow:
+        7vw 12vh white,
+        35vw 60vh white,
+        65vw 25vh white,
+        95vw 50vh white,
+        85vw 45vh white;
+    width: 3px;
+    height: 3px;
+    animation: starMove3 20s linear infinite;
+}
+
+@keyframes starMove1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes starMove2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes starMove3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-btn {
+    position: absolute; 
+    top: 2rem; 
+    left: 2rem; 
+    text-decoration: none;
+}
+
+.image {
+    height: 1.7rem;
+    margin-right: 0.2rem;
+}
+
+.logo {
+    height: 8rem;
+    width: 8rem;
+    background-image: url('jplogo.png');
+    background-size: cover;
+    margin-top: -2rem;
+    margin-bottom: -1rem;
+}
+
+
+
+.neon-title {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(270deg, #5a01ff, #b300ff);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s ease infinite;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.main1 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+
+}
+
+.game-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-item {
+    background: hsl(var(--card));
+    border: 2px solid hsl(var(--border));
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-tile);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: hsl(var(--primary));
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(var(--foreground));
+}
+
+.puzzle-container {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    border: 4px solid hsl(var(--primary));
+    box-shadow: var(--shadow-neon), inset 0 0 40px hsl(var(--primary) / 0.2);
+    background: hsl(var(--background));
+    transition: var(--transition-neon);
+}
+
+.puzzle-container.celebrating {
+    animation: celebrate-pulse 3s ease-in-out;
+    box-shadow: 0 0 60px hsl(var(--primary)), inset 0 0 100px hsl(var(--primary) / 0.3);
+}
+
+.puzzle-tile {
+    cursor: grab;
+    transition: var(--transition-neon);
+    border: 0.5px solid black;
+    box-shadow: var(--shadow-tile);
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.puzzle-tile:hover:not(.solved) {
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: var(--shadow-tile-hover);
+}
+
+.puzzle-tile.dragging {
+    opacity: 0.7;
+    cursor: grabbing;
+    z-index: 50;
+    transform: scale(1.1);
+    box-shadow: 0 0 40px hsl(var(--primary));
+}
+
+.puzzle-tile.drag-over {
+    transform: scale(1.1);
+    z-index: 40;
+    box-shadow: inset 0 0 30px hsl(var(--accent) / 0.8);
+}
+
+.puzzle-tile.solved {
+    cursor: default;
+    border-color: hsl(var(--primary));
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-neon {
+    background: var(--gradient-neon);
+    color: hsl(var(--primary-foreground));
+    font-size: 16px;
+    font-weight: 900;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    border: 2px solid hsl(var(--primary));
+    cursor: pointer;
+    transition: var(--transition-neon);
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: var(--shadow-neon);
+}
+
+.btn-neon:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-neon-strong);
+    background: var(--gradient-glow);
+}
+
+.btn-neon:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: hsl(var(--secondary));
+    box-shadow: none;
+    transform: none;
+}
+
+.status-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    min-height: 2rem;
+    color: rgb(255, 0, 64);
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.6);
+}
+
+.toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: hsl(var(--card));
+    border: 2px solid hsl(var(--border));
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--shadow-neon);
+    transform: translatey(-1000%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    max-width: 300px;
+}
+
+.toast.show {
+    transform: translatey(0);
+}
+
+.confetti-canvas {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    mix-blend-mode: screen;
+}
+
+@keyframes celebrate-pulse {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.05) rotate(1deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(0deg);
+    }
+
+    75% {
+        transform: scale(1.05) rotate(-1deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .puzzle-container {
+        width: 320px;
+        height: 320px;
+    }
+
+    .puzzle-tile {
+        background-size: 320px 320px;
+    }
+
+    .neon-title {
+        font-size: 2rem;
+    }
+
+    .game-stats {
+        gap: 1rem;
+    }
+
+    .stat-item {
+        padding: 0.75rem 1rem;
+    }
+}

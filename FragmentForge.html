@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Era</title>
+    <link rel="stylesheet" href="FragmentForge.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="home-btn">
+        <button class="btn-neon button"><img src="home.png" alt="" class="image"> Home</button>
+    </a>
+    <div class="head">
+        <div class="logo"></div>
+        <h1 class="neon-title" id="typewriter"></h1>
+    </div>
+    <a href="FragmentForge1.html">
+        <button class="btn-neon">Launch</button>
+    </a>
+
+    <div class="starfield">
+        <div class="stars stars1"></div>
+        <div class="stars stars2"></div>
+        <div class="stars stars3"></div>
+    </div>
+</body>
+<script>
+    // Typing animation for h1 (no CSS changes)
+    const text = "FRAGMENT FORGE";
+    const target = document.getElementById("typewriter");
+    let i = 0;
+    function typeWriter() {
+        if (i <= text.length) {
+            target.textContent = text.substring(0, i);
+            i++;
+            setTimeout(typeWriter, 120);
+        }
+    }
+    typeWriter();
+</script>
+
+</html>

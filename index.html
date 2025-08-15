@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Era</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <!-- Background Effects Container -->
+    <div class="starfield">
+        <div class="stars small"></div>
+        <div class="stars medium"></div>
+        <div class="stars large"></div>
+    </div>
+
+
+
+    <!-- Main Container -->
+    <div class="min-h-screen relative overflow-hidden">
+        <!-- Header -->
+        <header class="text-center pt-8 pb-12 relative z-10 ">
+            <h1 class="font-gaming text-6xl font-black neon-text mb-4 justify-items-center">
+                <div class="logo pe animate-float"></div>
+                BRAIN ERA
+            </h1>
+            <p class="text-xl text-gray-300 font-medium">
+                Enter the Ultimate Gaming Universe
+            </p>
+
+        </header>
+
+        <!-- Games Grid -->
+        <main class=" z-10 px-6">
+            <div class="max-w-6xl mx-auto justify-items-center">
+                <div class="justify-items-center flex justify-between items-center">
+
+                    <!-- Space Invaders Game Card -->
+                    <div class="game-card w-64 h-80 p-6 cursor-pointer animate-fade-in" data-game="space-invaders"
+                        style="animation-delay: 0s">
+                        <div class=" z-10 h-full flex flex-col items-center justify-between">
+                            <!-- Game Icon -->
+
+                            <div class="logo jp animate-float"></div>
+
+                            <!-- Game Info -->
+                            <div class="text-center space-y-3">
+                                <h3 class="font-gaming text-xl font-bold neon-text">Fragment Forge</h3>
+
+                            </div>
+
+                            <!-- Play Button -->
+                            <button
+                                class="w-full icon-glow py-3 bg-gradient-to-r from-red-500 to-purple-500 rounded-lg font-gaming font-bold text-black hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                                onclick="opengame('Fragment Forge')">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Puzzle Quest Game Card -->
+                    <div class="game-card w-64 h-80 p-6 cursor-pointer rounded-2xl animate-fade-in"
+                        data-game="puzzle-quest" style="animation-delay: 0.1s">
+                        <div class="relative z-10 h-full flex flex-col items-center justify-between">
+
+                            <div class="logo pb animate-float"></div>
+
+                            <div class="text-center space-y-3">
+                                <h3 class="font-gaming text-xl font-bold neon-text">Pair Busters</h3>
+
+                            </div>
+                            <button
+                                class="w-full icon-glow py-3 bg-gradient-to-r from-red-500 to-purple-500 rounded-lg font-gaming font-bold text-black hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                                onclick="opengame('pairbuster');">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="game-card w-64 h-80 p-6 cursor-pointer animate-fade-in" data-game="space-invaders"
+                        style="animation-delay: 0s">
+                        <div class=" z-10 h-full flex flex-col items-center justify-between">
+                            <!-- Game Icon -->
+
+                            <div class="logo tm animate-float"></div>
+
+                            <!-- Game Info -->
+                            <div class="text-center space-y-3">
+                                <h3 class="font-gaming text-xl font-bold neon-text">Typing Blitz</h3>
+
+                            </div>
+
+                            <!-- Play Button -->
+                            <button
+                                class="w-full icon-glow py-3 bg-gradient-to-r from-red-500 to-purple-500 rounded-lg font-gaming font-bold text-black hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                                onclick="opengame('Typing Blitz')">
+                                Play Now
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="relative z-10 text-center mt-16 pb-8">
+            <div class="text-gray-400 text-sm">
+                <p class="text-xl ">Player ! Are You Ready Choose Your Destiny</p>
+                <div class="mt-2 flex justify-center gap-4 text-sm">
+                    <span>🎮 Epic Games</span>
+                    <span>⚡ Instant Play</span>
+                    <span>🏆 Score cards</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="home.js">
+
+    </script>
+</body>
+
+</html>
